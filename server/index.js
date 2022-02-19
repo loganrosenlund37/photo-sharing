@@ -13,7 +13,7 @@ app.use(express.static('public'));
 // This request is a test example   
 app.get('/api/new', async (request, response) => {
   response.send('This is working');
-})
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
