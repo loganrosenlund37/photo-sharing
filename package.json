@@ -1,0 +1,31 @@
+{
+  "name": "photo-sharing",
+  "version": "1.0.0",
+  "description": "A photo sharing app to be used in a daily drawing/photography challenge so we can see each others daily submissions.",
+  "main": "index.js",
+  "author": "Logan Rosenlund",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server",
+    "build": "webpack -w"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
