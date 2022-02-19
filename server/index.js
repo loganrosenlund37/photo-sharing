@@ -13,6 +13,8 @@ app.use(express.static('public'));
 // This request is a test example   
 app.get('/api/new', async (request, response) => {
   response.send('This is working');
+  // send random picture
+  // send current prompts
 });
 
 app.listen(port, () => {
