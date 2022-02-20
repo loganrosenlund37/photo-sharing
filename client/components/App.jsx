@@ -1,29 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+import NavBar from './NavBar';
 import Home from './Home';
+import Prompts from './Prompts';
+import Pictures from './Pictures';
 
 function App() {
-  const [message, setMessage] = useState('');
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    axios.get('/api/new')
-      .then((response) => setMessage(response.data))
-      .catch((error) => console.error(error));
-  }, []);
-
-  const handleClick = (e) => {
-    setCount((current) => current + 1);
-  }
-
   return (
-    <div>
-      <Home />
-      <div>{message + ' is the message.'}</div>
-      <div>The count is: {count}</div>
-      <button type="button" onClick={handleClick} >Click Me</button>
-    </div>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="prompts" element={<Prompts />} />
+        <Route path="pictures" element={<Pictures />} />
+      </Routes>
+    </>
   )
 }
 
