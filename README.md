@@ -1,3 +1,5 @@
+[Wireframe](https://whimsical.com/picture-contest-G3b9n9xjcVCJgVHpqcmHEE)
+
 ### Installing and Running
 
 In the console run:
