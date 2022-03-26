@@ -21,8 +21,6 @@ function App() {
     localStorage.removeItem('logged-in');
   };
 
-  // if(!authStatus) return <LoginPage login={login} />;
-
   return (
     <>
       <AuthContext.Provider value={{ status: authStatus, login: login, logout: logout }}>
