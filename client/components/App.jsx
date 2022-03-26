@@ -8,24 +8,25 @@ import Prompts from './Prompts';
 import Pictures from './Pictures';
 import LoginPage from './LoginPage';
 import AuthContext from './auth-context';
+import HelpPage from './HelpPage';
 
 
 function App() {
-  const [authStatus, setAuthStatus] = useState(localStorage.getItem('logged-in')); 
+  const [loggedIn, setLoggedIn] = useState(localStorage.getItem('logged-in')); 
   const login = () => {
-    setAuthStatus(true);
+    setLoggedIn(true);
     localStorage.setItem('logged-in', true);
   };
   const logout = () => {
-    setAuthStatus(false);
+    setLoggedIn(false);
     localStorage.removeItem('logged-in');
   };
 
   return (
     <>
-      <AuthContext.Provider value={{ status: authStatus, login: login, logout: logout }}>
+      <AuthContext.Provider value={{ status: loggedIn, login: login, logout: logout }}>
         {
-          authStatus 
+          loggedIn 
           ? <>
             <NavBar />
             <Routes>
@@ -34,7 +35,10 @@ function App() {
               <Route path="pictures" element={<Pictures />} />
             </Routes>
           </>
-          : <LoginPage />
+          : <Routes>
+            <Route path="/" element={<LoginPage />} />
+            <Route path="help" element={<HelpPage />} />
+          </Routes>
         }
       </AuthContext.Provider>
     </>

@@ -34,7 +34,7 @@ const LoginPage = () => {
                     <label className='form-label fw-bold mb-0'>Password</label>
                     <input type="password" className="w-100" placeholder='Enter password...' {...bindPassword} />
                   </div>
-                  <div className='mb-3 px-sm-5 text-center'><button type='button' className='btn btn-link' onClick={() => setShowHelp(true)}>What is this site?</button></div>
+                  <a className='btn btn-link mb-3 px-sm-5' href="/#/help" >What is this site?</a>
                   <div className="mb-5 px-sm-5 pb-3"> <button type='submit' className="btn btn-dark w-100">Login</button></div>
                 </div>
               </div>
